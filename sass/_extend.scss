@@ -1,0 +1,40 @@
+%relative {
+    position: relative;
+}
+%absolute {
+    position: absolute;
+}
+%opacity1 {
+    opacity: 1;
+}
+%block {
+    display: block;
+}
+%font-NotoMed {
+    font-family: 'Noto Sans TC';
+}
+%font-NotoBlack {
+    font-family: 'Noto Sans TC';
+    font-weight: 700;
+}
+
+//input 前方加 icon
+%inputWI-pl32 {
+    width: 100%;
+    padding-left: 32px;
+}
+%inputWI-i {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 9px 10px;
+    opacity: 0.5;
+    font-size: 14px;
+    transition: opacity .3s;
+}
+
+//Cart filter hover & active
+%bgDefault-bright {
+    background-color: $color-default;
+    color: $color-bright;
+}

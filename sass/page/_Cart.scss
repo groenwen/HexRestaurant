@@ -1,0 +1,243 @@
+.cart {
+    >div {
+        display: inline-block;
+        @include mobile() {
+            display: block;
+        }
+    }
+}
+// Cart 選單
+.filter {
+    width: 23%;
+    margin-right: 2%;
+    @include mobile() {
+        width: 100%;
+        margin-right: 0%;
+        margin-bottom: 25px;
+    }
+    &-title {
+        font-size: $font-size-m;
+        text-align: left;
+        padding-bottom: 16px;
+        i{
+            transform: rotate(-20deg);
+            font-size: 28px;
+            margin-right: 10px;
+        }
+    }
+    &-list {
+        display: block;
+        line-height: 32px;
+        padding: 5px 10px;
+        border-bottom: 1px solid $color-default;
+        &:hover, &-active {
+            @extend %bgDefault-bright;
+        } 
+    }
+}
+
+
+// 搜尋、結帳、產品
+.cart-main {
+    width: 74%;
+    @include mobile() {
+        width: 100%;
+    }
+}
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 26px;
+    @include iphone6Plus(){
+        display: block;
+    }
+    &-search {
+        display: flex;
+        width: 60%;
+        @include iphone6Plus(){
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        .search {
+            height: 32px;
+            width: 100%;
+            border:2px solid $color-default;
+            padding: 5px 10px;
+            background-color: rgba(0,0,0,0);
+            font-size: 15px;
+            border-radius: 0px;
+        }
+        .search-btn {
+            @extend %bgDefault-bright;
+            width: 32px;
+            height: 32px;
+            font-size: 19px;
+            text-align: center;
+            line-height: 32px;
+            border-width: 0px;
+            cursor: pointer;
+        }
+    }
+    &-myCart {
+        display: flex;
+        align-items: center;
+        padding-right: 20px;
+        @include iphone6Plus() {
+            justify-content: flex-end;
+            padding-right: 10px;
+        }
+        .line {
+            width: 1px;
+            height: 14px;
+            border-left: 1px solid $color-default;
+            margin: 0px 12px;
+        } 
+        .myCart {
+            @extend %block;
+            position: relative;
+            font-size: 23px;
+            &:hover {
+                color: $color-primary;
+            }
+        }
+        .myCart-count {
+            position: absolute;
+            top: -7px;
+            right: -10px;
+            width: 18px;
+            height: 18px;
+            font-size: 11px;
+            color: #fff;
+            line-height: 18px;
+            text-align: center;
+            border-radius: 50%;
+            background-color: $color-primary;
+        }
+    }
+}
+
+.product {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-right: 7px;
+    padding-top: 7px;
+    overflow: hidden;
+    @include iphone6Plus() {
+        display: block;
+    }
+}
+.product-item {
+    position: relative;
+    width: 32%;
+    margin-bottom: 30px;
+    text-align: center;
+    box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.16);
+    padding-bottom: 10px;
+    &:hover {
+        box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.5);
+    }
+    @include pad() {
+        width: 49%;
+    }
+    @include iphone6Plus() {
+        width: 100%;
+    }
+    &-img {
+        height: 120px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    &-title {
+        margin-top: 11px;
+        line-height: 27px;
+    }
+    &-subtitle {
+        font-size: 12px;
+    }
+    .line {
+        width: 91px;
+        height: 1px;
+        border-top: 1px solid #3D1101;
+        margin: 10px auto 20px;
+    }
+    &-price {
+        font-family: 'Roboto';
+        font-size: $font-size-m;
+    }
+    &-btn {
+        display: block;
+        color: $color-primary;
+        border: 2px solid $color-primary;
+        border-radius: 3px;
+        line-height: 28px;
+        margin: 13px 10px 0px;
+        &:hover {
+            background-color: $color-primary;
+            color: $color-bright;
+        }
+        i {
+            padding-right: 9px;
+            font-size: 14px;
+        }
+    }
+}
+
+//愛心收藏
+.item-like {
+    position: absolute;
+    top:9px;
+    left: 9px;
+    color: $color-bright;
+    cursor: pointer;
+    i {
+        font-size: 23px;  
+        &.active{
+            color: $color-primary;
+        }
+    }
+}
+//熱銷美食
+.item-hot{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 90px;
+    height: 90px;
+    &-square, &-shadow1, &-shadow2 {
+        position: absolute;
+        border-style: solid;
+    }
+    &-square {
+        top:-55px;
+        right: -55px;
+        border-color: transparent transparent transparent #00cc99;
+        border-width: 25px;
+        width: 100px;
+        height: 100px;
+        transform: rotate(-45deg);
+    }
+    &-shadow1, &-shadow2 {
+        top:-10px;
+        right: 60px;
+        border-color: transparent  transparent #078F6D transparent;
+        border-width: 5px;
+        width: 0px;
+        height: 0px;
+    }
+    &-shadow2 {
+        top:60px;
+        right: -10px;
+        transform: rotate(90deg);
+    }
+    &-text {
+        position: absolute;
+        top:17px;
+        right: -8px;    
+        font-size: 14px;
+        color: #fff;
+        transform: rotate(45deg);
+    }
+}

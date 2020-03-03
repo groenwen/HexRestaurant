@@ -1,0 +1,199 @@
+//特色
+.feature {
+    text-align: center;
+    &-title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h2 {
+            font-size: $font-size-m;
+            padding: 0px 13px;
+            margin-bottom: 0px;
+        }
+        .line {
+            width: 11%;
+            height: 1px;
+            border-top: 1px solid #979797;
+            @include iphone5(){
+                display: none;
+            }
+        }
+    }
+    &-content {
+        display: flex;
+        justify-content: center;
+        @include mobile(){
+            display: block;
+        }
+    }
+    &-item{
+        max-width: 260px;
+        padding: 0px 2%;
+        @include mobile(){
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 0px 0px 30px;
+        }
+        img {
+            max-width: 200px;
+        }
+        
+        h3{
+            font-size: $font-size-s;
+            padding: 20px 0px 11px;
+        }
+        p {
+            text-align: left;
+        }
+    }
+}
+
+
+
+.wrap-chef {
+    background-color: #3D1101;
+}
+.chef {
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    @include mobile(){
+        display: block;
+    }
+    &-img{
+        background: url('../images/main_chef_brown.png') no-repeat;
+        background-size: cover;
+        background-position: right center;
+        width: 50%;
+        height: 460px;
+        @include mobile(){
+            width: 100%;
+            background-position: right top;
+        }
+    }
+    &-content{
+        color: #EFE9E7;
+        width: 50%;
+        padding: 30px 25px;
+        @include mobile(){
+            width: 100%;
+        }
+        h2{
+            font-size: $font-size-m;
+            text-align: left;
+        }
+        h3{
+            padding-bottom: 16px;
+        }
+    }
+}
+
+//comment
+.comment{
+    &-content {
+        display: flex;
+        justify-content: center;
+        @include mobile(){
+            display: block;
+        }
+    }
+    &-item {
+        display: flex;
+        max-width: 300px;
+        @include mobile(){
+            max-width: 500px;
+            margin: 0 auto;
+        }
+    }
+    &-img {
+        img {
+            max-width: 67px;
+        }
+    }
+    &-text {
+        margin-left: 13px;
+        h3{
+            font-size: $font-size-s;
+            line-height: 67px;
+        }
+        p {
+            line-height: 24px;
+        }
+    }
+    &-name {
+        text-align: right;
+        padding-top: 16px;
+    }
+}
+
+//地圖及表單
+.wrap-map {
+    background-color: rgba(255,255,255, 0.7);
+}
+.map{
+    &-content {
+        display: flex;
+        justify-content: center;
+        @include mobile(){
+            display: block;
+        }
+    }
+    &-iframe {
+        width: 49%;
+        height: 386px;
+        border: 1px solid #cccccc;
+        @include mobile(){
+            width: 100%;
+        }
+    }
+}
+
+.map-form{
+    width: 51%;
+    padding-left: 20px;
+    @include mobile(){
+        width: 100%;
+        margin: 0 auto;
+        padding: 30px 20px 0px;
+    }
+    @include iphone5(){
+        padding: 30px 0px 0px;
+    }
+    label {
+        font-size: 14px;        
+    }
+    >input {
+        margin-bottom: 12px;
+        width: 100%;
+        @include mobile(){
+            padding: 12px 14px;
+        }
+    }
+    &-radio {
+        display: flex;
+        align-items: flex-end;
+        input {
+            width: 30px;
+            height: 30px;
+        }        
+    }
+    &-btn {
+        display: flex;
+        flex-direction: row-reverse;
+        margin-top: 30px;
+        @include iphone6Plus(){
+            display: block;
+            text-align: center;
+        }
+        input {
+            margin-left: 10px;
+            @include iphone6Plus(){
+                width: 100%;
+                padding: 12px 0px;
+                margin-top: 10px;
+                margin-left: 0px;
+                font-size: 16px;
+            }
+        }
+    }
+}

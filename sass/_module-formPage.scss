@@ -1,0 +1,47 @@
+.m-header-title {
+    text-align: center;
+    @extend %font-NotoMed;
+    a {
+        @extend %block;
+        margin-bottom: 5px;
+    }
+}
+.m-inner {
+    margin-top: 35px;
+    padding: 15px;
+    border-top: 3px solid $color-primary;
+    box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.16);
+}
+.m-title {
+    @extend %font-NotoBlack;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.m-form {
+    input[type=text] {
+        @extend %inputWI-pl32;
+    }
+    .inputWithIcon{
+        @extend %relative;
+    }
+    .inputWithIcon i{
+        @extend %inputWI-i;
+    }
+    .inputWithIcon input[type=text]:focus + i{
+        @extend %opacity1;
+    }
+}
+
+.m-form-btn {
+    margin-top:30px;
+    @include iphone6Plus() {
+        text-align: center;
+        input {
+            width: 100%;
+            padding: 12px 0px;
+            margin-top: 5px;
+            font-size: 16px;
+        }
+    }
+}

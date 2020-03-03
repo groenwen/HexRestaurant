@@ -1,0 +1,345 @@
+//google font
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:500,700|Roboto:500i&display=swap&subset=chinese-traditional');
+
+body, html{
+    font-family: 微軟正黑體, "Microsoft JhengHei", sans-serif;
+    background-color: #efe9e7;
+    color: $color-default;
+    font-size: $font-size-base;
+}
+* {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box; //chrome
+	-moz-box-sizing: border-box; //firefox
+}
+img{
+	max-width: 100%;
+	height: auto;
+}
+a{
+    text-decoration: none;
+    color: $color-default;
+}
+.l-wrap{
+    padding: 50px 20px;
+    @include mobile {
+        padding: 50px 20px;
+    }
+}
+.l-container{
+	max-width: 960px;
+    margin: 0 auto;
+}
+
+//標題
+h2{
+    text-align: center;
+    font-size: $font-size-l;
+    line-height: 32px;
+}
+h3{
+    font-size: $font-size-m;
+}
+h4{
+    font-size: $font-size-s;
+}
+p{
+    line-height: $line-height-base;
+}
+
+
+//margin
+.mb12 {
+    margin-bottom: 12px;
+}
+.mb30 {
+    margin-bottom: 30px;
+}
+
+//form
+form label {
+    display: block;
+    line-height: 20px;
+    color: $color-default;
+    padding-bottom: 6px;
+}
+form input[type=text], form input[type=tel], form input[type=email] {
+    padding: 6px 14px;
+    font-size: 16px;
+    border-radius: 3px;
+    border: 1px solid #cccccc;
+    box-shadow: inset 0px 1px 0px 0px #ECECEC;
+}
+.form-group {
+    margin-bottom: 15px;
+    a { //忘記密碼...等連結
+        font-size: 14px;
+        color: $color-primary;
+        line-height: $line-height-base;
+        &:hover {
+            color: $color-default;
+        }
+    }
+}
+input[type=text]:focus{
+    border-color: $color-default;
+}
+//button
+.btn {
+    font-family: "PingFangTC-Regular";
+    font-size: 14px;
+    color: $color-bright;
+    padding: 7px 21px;
+    border-radius: 3px;
+    border-width: 0px;
+    cursor: pointer;
+}
+.btn-default {
+    background: rgba(0,0,0,0.35);
+    &:hover {
+        background: rgba(0,0,0,0.6);
+    }
+}
+.btn-primary {
+    background-color: #F56C23;
+    &:hover {
+        background-color: #F54111;
+    }
+}
+.btn-lg {
+    padding: 7px 46px; //padding: 13px 35px;
+    letter-spacing: 2px; //letter-spacing: 2px;
+}
+
+//header & footer
+.wrap-header {
+    width: 100%;
+    position: fixed;
+    z-index: 30;
+    background:rgba(0,0,0,0.80);
+}
+.header {
+    &:after {
+        @include clearfix;
+    }
+}
+.header-logo {
+    @include hide-text;
+    float:left;
+    display: block;
+    width: 120px;
+    height: 24px;
+    margin: 16px 0px 16px 20px;
+    background: url('../images/logo_w.svg') no-repeat;
+    background-size: contain;
+    @include mobile(){
+        width: 94px;
+        margin: 16px 0px 16px 13px;
+    }
+}
+
+//menu Web版
+.menu {
+    float: right;
+    margin-right: 10px;
+    @include mobile(){
+        display: none;
+    }
+    li {
+        display: inline-block;
+    }
+    &-item {
+        display: block;
+        color: $color-bright;
+        padding: 20px 20px 17px;
+        &:hover {
+            border-bottom: 3px solid $color-bright;
+        }
+    }
+    &-login {
+        margin-left: 10px;
+        padding: 6px 8px;
+        font-size: 14px;
+        border: 1px solid $color-bright;
+        border-radius: 5px;
+        &:hover {
+            background-color: $color-bright;
+            color: #000;
+        }
+    }
+    .thisPage {
+        border-bottom: 3px solid $color-bright;
+    }
+
+}
+
+// menu mobile版
+.openMenu-btn{
+    display: none;
+    float: right;
+    padding: 14px 18px;
+    font-size: 23px;
+    color: #fff;
+    @include mobile(){
+        display: block;
+    }
+}
+.openMenu {
+    display: none;
+    position: fixed;
+    top:56px;
+    left: 0;
+    right: 0;
+    background:rgba(0,0,0,0.8);
+    border-top: 2px solid $color-bright;
+    &-item {
+        display: block;
+        color: $color-bright;
+        padding: 15px 30px;
+        letter-spacing: 2px;
+        border-top: 1px solid #000;
+        &:hover{
+            color: #000;
+            background-color: #fff;
+            border-top: 1px solid #fff;
+        }
+    }
+}
+
+
+.wrap-banner {
+    background-color: #000;
+    background-image: url('../images/header_desktop.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    @include iphone6Plus() {
+        background-image: url('../images/header_mobile.png');
+    }
+}
+.banner{
+    @extend %relative;
+    height:420px;
+    &-title {
+        @include block-center;
+        padding: 20px 30px;
+        background: rgba(0,0,0,0.35);
+        text-align: center;
+        h2 {
+            width: 396px;
+            font-size: 36px;
+            color: $color-bright;
+            line-height: 45px;
+            margin-bottom: 16px;
+            @include mobile(){
+                width: 250px;
+            }
+        }
+        p{
+            color: $color-bright;
+            line-height: $line-height-base;
+            letter-spacing: 1px;
+        }
+    }
+}
+
+
+.wrap-footer{
+    padding: 50px 40px;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    @include mobile() {
+        display: block;
+    }
+    &-content {
+        display: flex;
+        @include mobile() {
+            display: block;
+        }
+    }
+    &-aboutUs, &-contactUs {
+        max-width: 300px;
+        margin-right:16px;
+        @include mobile(){
+            padding-bottom: 30px;
+            max-width: 100%;
+        }
+        h6 {
+            font-size: $font-size-l;
+            margin-bottom: 16px;
+        }
+        p, .contactUs-list{
+            line-height: $line-height-base;
+        }
+        .contactUs-list {
+            padding-left: 20px;
+            li {
+                white-space: nowrap;
+                list-style: disc;
+            }    
+        }
+    }
+    &-icon {
+        @include clearfix;
+        @include mobile(){
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        .logo {
+            @extend %block;
+            width: 245px;
+            margin-bottom: 22px;
+        }
+    }
+}
+.social {
+    display: flex;
+    justify-content: flex-end;
+    a {
+        @extend %block;
+        margin-left: 12px;
+    }
+    // 社群logo
+    &-googlePlus {
+        color: #DB4437;
+        &:hover {
+            color: darken( #DB4437, 10%);
+        }
+    }
+    &-twitter {
+        color: #41ABE1;
+        &:hover {
+            color: darken( #41ABE1, 10%);
+        }
+    }
+    &-fb {
+        color: #3A5795;
+        &:hover {
+            color: darken( #3A5795, 10%);
+        }
+        
+    }
+}
+
+
+// js
+//menu至對應區域時顯示item
+.menu-item-active {
+    border-bottom: 3px solid $color-bright;
+    @include mobile(){
+        border-bottom: 0px;
+    }
+}
+//scroll至指定區域顯示文字
+.animated{
+    opacity: 0;
+    transition: opacity,transform 1s;
+    transform: translateY(50px);
+}
+.fadeIn{
+    opacity: 1;
+    transform: translateY(0px);
+}
+

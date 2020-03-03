@@ -1,0 +1,62 @@
+$font-style: MicrosoftJhengHeiRegular; //全域字型
+$font-style-logo: NotoSansCJKtc-Black; //logo字型
+$font-size-base: 16px; //Default
+$font-size-l: 24px; //h2
+$font-size-m: 20px; //h3
+$font-size-s: 18px; //h4
+$line-height-base: 21px;
+
+//color
+$color-default: #3D1101; //預設文字樣式
+$color-primary: #F56C23;
+$color-bright: #ffffff;
+
+//width
+$width-pad: 768px;
+$width-mobile: 767px;
+$width-iphone6Plus: 414px;
+$width-iphone5: 320px;
+
+//RWD 斷點
+@mixin pad {
+    @media (max-width: $width-pad){
+        @content;
+    }
+}
+@mixin mobile {
+    @media (max-width: $width-mobile){
+        @content;
+    }
+}
+@mixin iphone6Plus {
+    @media (max-width: $width-iphone6Plus){
+        @content;
+    }
+}
+@mixin iphone5 {
+    @media (max-width: $width-iphone5){
+        @content;
+    }
+}
+
+//清除浮動
+@mixin clearfix {
+    clear: both;
+    display: table;
+    content:'';
+}
+
+//圖片取代文字
+@mixin hide-text {
+    text-indent: 110%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+//區塊置中
+@mixin block-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
