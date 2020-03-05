@@ -1,5 +1,5 @@
 # 六角西餐廳
->由六角學院提供設計稿，為RWD課程的最終作業
+>由六角學院提供設計稿，為 RWD 課程的最終作業
 
 ### 網頁
 https://groenwen.github.io/HexRestaurant/
