@@ -1,7 +1,7 @@
 ## 六角西餐廳(RWD練習)
 說明：由六角學院提供設計稿
 
-網頁：[六角西餐廳](https://groenwen.github.io/HexRestaurant/)
+網頁：https://groenwen.github.io/HexRestaurant/
 
 練習重點：
 * 自行切版、撰寫 RWD
