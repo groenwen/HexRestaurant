@@ -7,3 +7,5 @@
 	<li>使用SCSS撰寫</li>
 	<li>jQuery 製作動畫效果</li>
 </ul>
+UI介面：
+<img src="https://groenwen.github.io/WebResume/images/website-restaurant.png" width="400px">
